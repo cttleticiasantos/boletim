@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Boletim</title>
+
+</head>
+<body>
+    <h3>Boletim</h3>
+    <div id = "nomea"> </div>
+    <div id="nomep"> </div>
+    <div id="nota1"> </div>
+    <div id="nota2"> </div>
+    <div id="nota3"> </div>    
+    <div id="media"> </div>
+    <div id="situacao"> </div>
+<script>
+    let nomea =prompt ("Escreva o nome do aluno:");
+    let nomep= prompt ("Escreva o nome do professor:");
+    let nota1 =Number (prompt ("Escreva a nota 1:"));
+    let nota2= Number (prompt ("Escreva a nota 2:"));
+    let nota3 = Number (prompt ("Escreva a nota 3:"));
+    
+    let media=(nota1+nota2+nota3)/3;
+    let situacao;
+
+    if(media<=4){
+        situacao= "Retido";
+    }else if (media<7){
+        situacao="Recuperação";
+    }else if(media>=7){
+        situacao = "Aprovado";
+    }else {
+        situacao= "Esta média é inválida ";
+    }
+    document.getElementById("nomea").innerHTML = "Aluno: " + nomea;
+    document.getElementById("nomep").innerHTML = "Professor: " + nomep;
+    document.getElementById("nota1").innerHTML = "Nota 1: " + nota1;
+    document.getElementById("nota2").innerHTML = "Nota 2: " + nota2;
+    document.getElementById("nota3").innerHTML = "Nota 3: " + nota3;
+    document.getElementById("media").innerHTML = "Média: " + media;
+    document.getElementById("situacao").innerHTML = "Situação Final: " + situacao;
+    
+    </script>
+ </body>
+ </html> 
